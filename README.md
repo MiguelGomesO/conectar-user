@@ -59,20 +59,39 @@ O backend protege todas as rotas com:
 ## 🧱 Estrutura
 
 ### Backend
+```
 src/
 ├── auth/
 ├── users/
 ├── common/
 └── uploads/
-
+```
 
 ### Frontend
+```
 src/
 ├── pages/
 ├── services/
 ├── components/
 └── assets/
+```
 
+# Clone o repositório
+git clone https://github.com/MiguelGomesO/conecta-user.git
+
+# Acesse a pasta do projeto
+cd conecta-user
+
+## 🛠️ Criando o Primeiro ADMIN
+
+Como o sistema precisa de um administrador inicial e não há cadastro direto via interface para `ADMIN`, o primeiro usuário deve ser inserido diretamente no banco com uma senha **sem hash**. Exemplo de comando SQL:
+
+```sql
+INSERT INTO users (name, email, password, role)
+VALUES ('Admin Master', 'admin@email.com', '123456', 'ADMIN');
+```
+
+Após isso, ao fazer login, a senha será criptografada automaticamente na primeira atualização, pois o sistema aplica hash nos processos de autenticação e edição.
 
 ## 🙌 Considerações Finais
 

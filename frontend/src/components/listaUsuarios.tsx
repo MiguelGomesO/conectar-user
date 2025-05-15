@@ -205,7 +205,6 @@ const ListaUsuarios = () => {
                 </div>
             </div>
 
-
             <div className="overflow-x-auto">
                 <table className="min-w-full border-separate border-spacing-0 rounded-lg overflow-hidden shadow-sm">
                     <thead className="bg-gray-200 text-gray-700 text-sm uppercase font-semibold">
@@ -249,7 +248,6 @@ const ListaUsuarios = () => {
                 <button onClick={() => setPaginaAtual(p => Math.min(p + 1, totalPaginas))} disabled={paginaAtual === totalPaginas} className={`px-4 py-2 rounded font-medium transition ${paginaAtual === totalPaginas ? 'bg-gray-300 text-gray-500 cursor-not-allowed' : 'bg-blue-600 text-white hover:bg-blue-700'}`}>Próxima</button>
             </div>
 
-            {/* Modal permanece o mesmo */}
             {editarModal && (
                 <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
                     <div className="bg-white/80 backdrop-blur-md p-6 rounded-xl shadow-lg w-full max-w-xl relative">

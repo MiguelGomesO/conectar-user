@@ -8,7 +8,7 @@ const Perfil = () => {
   const [modalVisivel, setModalVisivel] = useState(false);
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
-const [senha, setSenha] = useState<string | null>(null);
+  const [senha, setSenha] = useState<string | null>(null);
   const [file, setFile] = useState<File | null>(null);
   const [preview, setPreview] = useState<string | null>(null);
   const [avatar] = useState('');
@@ -48,7 +48,7 @@ const [senha, setSenha] = useState<string | null>(null);
     const formData = new FormData();
     formData.append('name', name);
     formData.append('email', email);
-    if(senha){
+    if (senha) {
       formData.append('password', senha);
     }
     if (file) {
@@ -90,7 +90,6 @@ const [senha, setSenha] = useState<string | null>(null);
     setModalVisivel(false);
     setTimeout(() => setMostrarModal(false), 300); // esperar a transição terminar
   };
-
 
   const formatarData = (dataIso: string) => {
     const data = new Date(dataIso);

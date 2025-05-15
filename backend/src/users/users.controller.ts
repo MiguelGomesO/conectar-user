@@ -33,7 +33,7 @@ export class UsersController {
   @UseGuards(JwtAuthGuard)
   @Get('perfil')
   async getPerfil(@Request() req) {
-    const user = await this.usersService.findById(req.user.userId); // <- esse aqui
+    const user = await this.usersService.findById(req.user.userId);
     return user;
   }
 
