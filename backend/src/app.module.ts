@@ -8,17 +8,13 @@ import { User } from './users/entities/user.entity';
   imports: [
     TypeOrmModule.forRoot({
       type: 'postgres',
-      host: 'localhost',
-      port: 5432,
-      username: 'postgres',
-      password: '250701farpador',
-      database: 'conectauserdb',
-      entities: [User],
+      url: process.env.DATABASE_URL,
+      autoLoadEntities: true,
       synchronize: true,
     }),
     UsersModule,
     AuthModule,
   ],
 })
-export class AppModule {}
+export class AppModule { }
 
